@@ -1,0 +1,10 @@
+section.blog-more.section-padding
+    .container
+      .blog-more__header
+        .section-header
+          h3 MAKEUP ARTIST TIPS
+          h2 Makeup artist tips
+      .blog-more__body
+        .row
+          each item in blogMore
+            +blogMoreItem(item.img, item.content)(class= item.icon)

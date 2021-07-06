@@ -1,0 +1,12 @@
+section.products-beauty.section-padding
+  .container
+    .products-beauty__header
+      .section-header
+        h3 MAKEUP ARTIST TIPS
+        h2 Makeup artist tips
+    .products-beauty__body
+      .owl-carousel.owl-theme
+        each item in productBeauty 
+          +productBeautyItem(item.img)
+    .products-beauty__footer
+      a(href='') VIEW ALL PRODUCTS

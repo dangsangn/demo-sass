@@ -1,0 +1,50 @@
+footer.footer.section-padding
+  .container
+    .footer__contact
+      .row
+        each item in footerContact
+          +footerContactItem(item.icon, item.title, item.info)
+        //- .col-xl-4.col-lg-4.col-md-6.col-sm-12
+        //-   .footer__contact__item
+        //-     span.footer__contact__item__icon
+        //-       i.fa.fa-map-marker(aria-hidden='true')
+        //-     h3 ADDRESS
+        //-     p 509 Myrtle Ave, Brooklyn, NY 11205, USA
+        //- .col-xl-4.col-lg-4.col-md-6.col-sm-12
+        //-   .footer__contact__item
+        //-     span.footer__contact__item__icon
+        //-       i.fa.fa-map-marker(aria-hidden='true')
+        //-     h3 ADDRESS
+        //-     p 509 Myrtle Ave, Brooklyn, NY 11205, USA
+        //- .col-xl-4.col-lg-4.col-md-6.col-sm-12
+        //-   .footer__contact__item
+        //-     span.footer__contact__item__icon
+        //-       i.fa.fa-phone(aria-hidden='true')
+        //-     h3 PHONE
+        //-     p +1 718-783-1936 +1 718-783-1966
+        //- .col-xl-4.col-lg-4.col-md-6.col-sm-12
+        //-   .footer__contact__item
+        //-     span.footer__contact__item__icon
+        //-       i.fa.fa-envelope-o(aria-hidden='true')
+        //-     h3 EMAIL
+        //-     p Makeup.artist@gmail.com
+    .footer__instagram
+      .footer__instagram__logo
+        .footer__instagram__logo__img
+          img(src='assets/images/logo/logo.jpg', alt='picture')
+        p Follow us on @makeupartist
+      .row
+        each item in footerImgInstagamr
+          .col 
+            .footer__instagram__img
+              img(src= item alt='picture')
+    .footer__copyright
+      p
+        | Copyright &copy;2021 All rights reserved | This template is made with 
+        i.fa.fa-heart(aria-hidden='true')
+        |  by 
+        a(href='http://') Colorlib
+      p
+        each item in socialImg
+          a(href='')
+          i(class= item aria-hidden='true')

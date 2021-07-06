@@ -1,0 +1,50 @@
+header
+  .header
+    .container
+      .row
+        .col-xl-2.col-lg-2.col-md-3.col-sm-4.col-4
+          .header__logo
+            img(src='assets/images/logo/logo.jpg', alt='logo')
+        .col-xl-10.col-lg-10.col-md-9.col-sm-8.col-8
+          .header__option
+            .row
+              .col-xl-8.col-lg-8
+                nav.header__menu
+                  ul.menu
+                    each item, index in menuHeaderList
+                      li.menu__item
+                        a(href='', class=`menu__link ${index===0 ?"menu__link__active " :""}`)= item
+                        if(index===4)
+                          ul.sub-menu
+                            - let dropdown=["Work", "Cart", "Checkout", "Wishlist","Product Details", "Blog Details"]
+                              each itemDropdown in dropdown
+                                li.sub-menu__item
+                                  a.sub-menu__link(href='')= itemDropdown
+              .col-xl-4.col-lg-4
+                .header__control
+                  a.header__control__search(href='')
+                    i.fas.fa-search
+                  a.header__control__get(href='#')
+                    | GET A QUOTE
+          .header__mobile
+            label(for='checkbox-menu')
+              i.fa.fa-bars(aria-hidden='true')
+            input#checkbox-menu(type='checkbox')
+            label.overlay(for='checkbox-menu')
+            .header__mobile__list
+              .header__mobile__search
+                i.fa.fa-search(aria-hidden='true')
+              .header__mobile__img
+                img(src='assets/images/logo/logo.jpg', alt='picture')
+              .header__mobile__container
+                label(for='header-mobile-menu-sub')
+                  | MENU 
+                  i.fa.fa-bars(aria-hidden='true')
+                input#header-mobile-menu-sub(type='checkbox')
+                ul.menu-mobile-list
+                  - let subMenu ["Home", "About", "Services", "shop", "Pages", "Blog", "Contact"]
+                    each item in subMenu
+                      li.menu-mobile-list__item
+                        a(href='')= item
+              a.header__control__get(href='#')
+                | GET A QUOTE

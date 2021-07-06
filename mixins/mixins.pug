@@ -1,0 +1,49 @@
+mixin blogMoreItem(img, content) 
+  .col-xl-4.col-lg-4.col-md-6.col-sm-12
+    .blog-more__item
+      .blog-more__item__img
+        img(src=`assets/images/blog/${img}`, alt='image')
+      .blog-more__item__content
+        span.blog-more__item__content__icon
+          i(class!=attributes.class aria-hidden='true')
+        h3= content
+        p
+          span Rosie Chapman
+          span
+          span Jun 15, 2020
+
+mixin productBeautyItem(img) 
+  .item
+    .products-beauty__item
+      .products-beauty__item__action
+        span
+          i.fa.fa-shopping-bag(aria-hidden='true')
+        span
+          i.fa.fa-eye(aria-hidden='true')
+        span
+          i.fa.fa-heart(aria-hidden='true')
+      .products-beauty__item__img
+        img(src=`assets/images/products/${img}`, alt='image')
+      .products-beauty__item__content
+        p Plettes
+        h4 Lorem, ipsum dolor.
+        p $39.00
+
+mixin servicesContentItem(img)
+  .services__content__item
+          .services__content__item__img
+            img(src=`assets/images/services/${img}`, alt='')
+          .services__content__item__info
+            h4.text-clamp.text-clamp--2 DAILY MAKEUP
+            p From $20.0
+
+mixin footerContactItem(icon, title, info)
+  .col-xl-4.col-lg-4.col-md-6.col-sm-12
+    .footer__contact__item
+      span.footer__contact__item__icon
+        i(class= icon aria-hidden='true')
+      h3= title
+      p= info
+ 
+          
+

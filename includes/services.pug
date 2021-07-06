@@ -1,0 +1,10 @@
+section.services
+    .container
+      .services__header
+        .section-header
+          h3 BEST MAKEUP SERVICES
+          h2 Professional makeup
+      .services__content
+        each item in services 
+          +servicesContentItem(item.img)
+        
